@@ -1,0 +1,166 @@
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--background);
+    font-family: 'Castoro';
+    font-weight: 700;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 88px;
+}
+
+nav .gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+    color: var(--background);
+    font-family: 'Castoro';
+    font-weight: 700;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 88px;
+}
+
+.navBar {
+    display: none; /* Ensure the navBar is hidden by default */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--primary); /* Use your color variable */
+    position: absolute; /* Position absolutely to overlay content */
+    top: 88px; /* Below the gridContainer */
+    left: 0; /* Align to the left */
+    z-index: 10; /* Above the content */
+}
+
+.navItem {
+    font-size: 22.56px;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    transition: 0.3s;
+    background-color: var(--primary);
+    text-align: center; /* Center text for nav items */
+}
+
+.navTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45.28px;
+    padding: 0 16px;
+    margin: 0;
+    color: var(--background);
+}
+
+.navItem a{
+    display: flex;
+    text-decoration: none;
+    color: var(--secondary);
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.navItem a:hover{
+    background-color: var(--primary-hover);
+}
+
+.navItem.active a{
+    color: var(--background);
+}
+
+nav div .logo{
+    display: flex;
+    width: 100%;
+    padding-top: 4px;
+    padding-left: 16px;
+}
+
+nav * * * img, footer * * * img{
+    object-fit: contain;
+    height: 80px;
+    width: 100%;
+}
+
+@media (max-width: 1290px) {
+    nav * * .navTitle{
+        font-size: 32px;
+    }
+}
+
+/* Styles for hamburger button - shown only on small screens */
+.hamburger {
+    display: none; /* Hide the hamburger icon by default */
+    cursor: pointer;
+    height: fit-content;
+    padding: 16px;
+    margin: 0;
+    background-color: var(--accent);
+    width: fit-content;
+}
+
+/* Media query for screens wider than 780px */
+@media (min-width: 780px) {
+    .navBar {
+        display: flex; /* Show the navbar as flex container on large screens */
+        justify-content: flex-end;
+        align-items: center;
+        position: relative; /* Reset position */
+        top: auto; /* Reset top position */
+        background: none; /* Clear background */
+        padding-right: 16px;
+    }
+
+    .btnWrap {
+        display: none; /* Hide the hamburger icon on large screens */
+    }
+}
+
+/* Media query for screens 780px wide or less */
+@media (max-width: 780px) {
+    nav .gridContainer{
+        grid-template-columns: 1fr .2fr;
+    }
+
+    .btnWrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+    }
+
+    .navBar.hidden {
+        display: none;
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger icon on small screens */
+    }
+
+    .navBar {
+        display: none; /* Hide the navBar by default on small screens */
+        flex-direction: column;
+        /* Ensure full width and positioning */
+        width: 100%;
+        position: absolute;
+        top: 88px; /* Adjust this value if necessary */
+        left: 0;
+        background-color: var(--primary); /* Ensure background color is set */
+    }
+
+    /* Only display navBar when it does not have the 'hidden' class */
+    .navBar:not(.hidden) {
+        display: flex;
+    }
+    
+}

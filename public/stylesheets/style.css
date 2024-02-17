@@ -1,8 +1,38 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+:root {
+  --text: #0e1807;
+  --background: #f4fbef;
+  --primary: #303829;
+    --primary-hover: #4d5a4a;
+  --secondary: #ad9d34;
+    --secondary-hover: #d4c24e;
+  --accent: #96ca71;
+    --accent-hover: #b0d18a;
 }
 
-a {
-  color: #00B7FF;
+@import url('https://fonts.googleapis.com/css?family=Castoro:700|Noto%20Sans:400');
+
+body {
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
 }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Castoro';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 5.652rem; /* 90.4px */}
+
+h2 {font-size: 3.997rem; /* 64px */}
+
+h3 {font-size: 2.827rem; /* 45.28px */}
+
+h4 {font-size: 1.999rem; /* 32px */}
+
+h5 {font-size: 1.414rem; /* 22.56px */}
+
+small {font-size: 0.707rem; /* 11.36px */}

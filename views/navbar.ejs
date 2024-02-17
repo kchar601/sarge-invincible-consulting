@@ -1,0 +1,30 @@
+<nav>
+    <div class="gridContainer">
+        <div class="logo">
+            <a href="/"><img src="/images/logo.png" alt="logo"></a>
+            <h1 class="navTitle">Sarge's Invincible Consulting</h1>
+            <link rel="stylesheet" href="/stylesheets/navbar.css">
+        </div>
+        <ul class="navBar hidden">
+            <% ['Home', 'Portfolio', 'Services', 'About', 'Contact'].forEach(element => { %>
+                <li class="navItem <% if (element==currentPage) { %>active<% } %>"><a href="/<%= element %>"><%= element %></a></li>
+            <% }); %>
+        </ul>
+        <div class="btnWrap">
+            <button class="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.75em" viewBox="0 0 448 512"><style>svg{fill:var(--background)}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.querySelector('.hamburger');
+      const navBar = document.querySelector('.navBar');
+    
+      hamburger.addEventListener('click', function () {
+        navBar.classList.toggle('hidden');
+      });
+    });
+</script>
