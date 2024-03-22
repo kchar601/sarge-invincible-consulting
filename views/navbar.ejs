@@ -7,7 +7,11 @@
         </div>
         <ul class="navBar hidden">
             <% ['Home', 'Portfolio', 'Services', 'About', 'Contact'].forEach(element => { %>
-                <li class="navItem <% if (element==currentPage) { %>active<% } %>"><a href="/<%= element %>"><%= element %></a></li>
+                <li class="navItem <% if (element == currentPage) { %>active<% } %>">
+                    <a href="/<% if (element == currentPage) { %>#<% } else { %><%= element %><% } %>">
+                      <%= element %>
+                    </a>
+                  </li>
             <% }); %>
         </ul>
         <div class="btnWrap">

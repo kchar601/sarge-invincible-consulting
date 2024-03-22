@@ -7,18 +7,13 @@
         </div>
         <ul class="footer-navBar">
             <% ['Home', 'Portfolio', 'Services', 'About', 'Contact'].forEach(element => { %>
-                <li class="footer-navItem <% if (element==currentPage) { %>active<% } %>">
-                    <a href="/<%= element %>"><%= element %></a>
-                </li>
+                <li class="navItem <% if (element == currentPage) { %>active<% } %>">
+                    <a href="/<% if (element == currentPage) { %>#<% } else { %><%= element %><% } %>">
+                      <%= element %>
+                    </a>
+                  </li>
             <% }); %>
         </ul>
-        <div class="emailProbe">
-            <h4>Reach out via email</h4>
-            <form action="/newsletter" method="POST">
-                <input type="email" name="email" placeholder="Enter your email">
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
     </div>
     <p class="copyRight">&copy; 2024 Sarge's Invincible Consulting</p>
 </footer>

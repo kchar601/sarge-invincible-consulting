@@ -1,16 +1,14 @@
 nav{
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--primary);
-    color: var(--background);
+    color: var(--text);
     font-family: 'Castoro';
     font-weight: 700;
-    width: 100%;
     position: sticky;
-    top: 0;
+    top: -1px;
     z-index: 100;
-    height: 88px;
+    height: 64px;
+    width:100%;
 }
 
 nav .gridContainer{
@@ -19,14 +17,13 @@ nav .gridContainer{
     margin: 0;
     padding: 0;
     background-color: var(--primary);
-    color: var(--background);
     font-family: 'Castoro';
     font-weight: 700;
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 100;
-    height: 88px;
+    height: 64px;
 }
 
 .navBar {
@@ -36,13 +33,13 @@ nav .gridContainer{
     margin: 0;
     background-color: var(--primary); /* Use your color variable */
     position: absolute; /* Position absolutely to overlay content */
-    top: 88px; /* Below the gridContainer */
+    top: 64px; /* Below the gridContainer */
     left: 0; /* Align to the left */
     z-index: 10; /* Above the content */
 }
 
 .navItem {
-    font-size: 22.56px;
+    font-size: var(--h5-font-size);
     padding: 10px;
     margin: 0;
     border-radius: 5px;
@@ -55,20 +52,20 @@ nav .gridContainer{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 45.28px;
+    font-size: var(--h4-font-size);
     padding: 0 16px;
     margin: 0;
-    color: var(--background);
 }
 
 .navItem a{
     display: flex;
     text-decoration: none;
-    color: var(--secondary);
     height: 100%;
-    width: 100%;
     align-items: center;
     justify-content: center;
+    padding: 6px;
+    border-radius: 4px;
+    color: var(--text);
 }
 
 .navItem a:hover{
@@ -76,26 +73,19 @@ nav .gridContainer{
 }
 
 .navItem.active a{
-    color: var(--background);
+    color: var(--secondary);
 }
 
 nav div .logo{
     display: flex;
-    width: 100%;
-    padding-top: 4px;
+    align-items: center;
     padding-left: 16px;
 }
 
 nav * * * img, footer * * * img{
     object-fit: contain;
-    height: 80px;
+    height: 56px;
     width: 100%;
-}
-
-@media (max-width: 1290px) {
-    nav * * .navTitle{
-        font-size: 32px;
-    }
 }
 
 /* Styles for hamburger button - shown only on small screens */
@@ -107,6 +97,26 @@ nav * * * img, footer * * * img{
     margin: 0;
     background-color: var(--accent);
     width: fit-content;
+    border: none;
+    border-radius: 4px;
+}
+
+@media (max-width: 980px){
+    .navItem a{
+        padding: 2px;
+    }
+}
+
+@media (max-width: 940px){
+    .navTitle{
+        font-size: var(--h5-font-size);
+    }
+    nav{
+        height: 80px;
+    }
+    .logo{
+        height: 100%;
+    }
 }
 
 /* Media query for screens wider than 780px */
@@ -119,6 +129,7 @@ nav * * * img, footer * * * img{
         top: auto; /* Reset top position */
         background: none; /* Clear background */
         padding-right: 16px;
+        width: auto;
     }
 
     .btnWrap {

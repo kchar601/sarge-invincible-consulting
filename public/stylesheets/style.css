@@ -1,12 +1,21 @@
 :root {
-  --text: #0e1807;
-  --background: #f4fbef;
+  --background: #0e1807;
+  --text: #f4fbef;
   --primary: #303829;
     --primary-hover: #4d5a4a;
   --secondary: #ad9d34;
     --secondary-hover: #d4c24e;
   --accent: #96ca71;
     --accent-hover: #b0d18a;
+
+  --h1-font-size: 4.210rem;
+  --h2-font-size: 3.158rem;
+  --h3-font-size: 2.369rem;
+  --h4-font-size: 1.777rem;
+  --h5-font-size: 1.333rem;
+  --small-font-size: 0.750rem;
+  --body-font-size: 1rem;
+
 }
 
 @import url('https://fonts.googleapis.com/css?family=Castoro:700|Noto%20Sans:400');
@@ -16,6 +25,10 @@ body {
   font-weight: 400;
   padding: 0;
   margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+  position: absolute;
+  width: 100vw;
 }
 
 h1, h2, h3, h4, h5 {
@@ -25,14 +38,137 @@ h1, h2, h3, h4, h5 {
 
 html {font-size: 100%;} /* 16px */
 
-h1 {font-size: 5.652rem; /* 90.4px */}
+h1 {font-size: 4.210rem; /* 67.36px */}
 
-h2 {font-size: 3.997rem; /* 64px */}
+h2 {font-size: 3.158rem; /* 50.56px */}
 
-h3 {font-size: 2.827rem; /* 45.28px */}
+h3 {font-size: 2.369rem; /* 37.92px */}
 
-h4 {font-size: 1.999rem; /* 32px */}
+h4 {font-size: 1.777rem; /* 28.48px */}
 
-h5 {font-size: 1.414rem; /* 22.56px */}
+h5 {font-size: 1.333rem; /* 21.28px */}
 
-small {font-size: 0.707rem; /* 11.36px */}
+small {font-size: 0.750rem; /* 12px */}
+
+.grid-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.m-32{
+  margin: 32px;
+}
+
+.mx-32{
+  margin: 0px 32px;
+}
+
+.my-16{
+  margin: 16px 0px;
+}
+
+.mt-0{
+  margin-top: 0px;
+}
+
+.g-16{
+  gap: 16px;
+}
+
+.gv-16{
+  column-gap: 32px;
+}
+
+.gv-8{
+  column-gap: 16px;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pl-16{
+  padding-left: 16px;
+}
+
+.small-heading{
+  font-size: var(--h5-font-size);
+  margin: 0;
+  padding: 0;
+  color: var(--secondary);
+}
+
+.big-pg{
+  font-size: var(--h3-font-size);
+  margin: 0;
+  padding: 0;
+}
+
+.hero-img{
+  position: absolute;
+  top: 5%;
+  right: 2.5%;
+  width: 80%;
+  height: 30%;
+  object-fit: cover;
+}
+
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: var(--text);
+}
+
+.hero-textbox{
+  position: absolute;
+  width: 40%;
+  height: 20%;
+  top: 20%;
+  left: 2.5%;
+  text-align: center;
+  background-color: var(--primary);
+}
+
+.hero-cta {
+  position: relative;
+  font-size: var(--h3-font-size);
+  left: 100%;
+  bottom: 17.5%;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  color: var(--text);
+}
+
+.hero-cta a{
+  text-decoration: none;
+  background-color: var(--secondary);
+  color: var(--background);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hero-cta a:hover{
+  background-color: var(--secondary-hover);
+}
+
+.grid-2-rows{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay:hover{
+  
+}
