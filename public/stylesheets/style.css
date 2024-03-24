@@ -28,7 +28,6 @@ body {
   background-color: var(--background);
   color: var(--text);
   position: absolute;
-  width: 100vw;
 }
 
 h1, h2, h3, h4, h5 {
@@ -55,6 +54,11 @@ small {font-size: 0.750rem; /* 12px */}
   grid-template-columns: 1fr 1fr;
 }
 
+.grid-2-narrow{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
 .m-32{
   margin: 32px;
 }
@@ -69,6 +73,10 @@ small {font-size: 0.750rem; /* 12px */}
 
 .mt-0{
   margin-top: 0px;
+}
+
+.mt-64{
+  margin-top: 64px;
 }
 
 .g-16{
@@ -108,10 +116,10 @@ small {font-size: 0.750rem; /* 12px */}
 
 .hero-img{
   position: absolute;
-  top: 5%;
-  right: 2.5%;
+  top: 80px;
+  right: 16px;
   width: 80%;
-  height: 30%;
+  height: 70vh;
   object-fit: cover;
 }
 
@@ -120,25 +128,24 @@ small {font-size: 0.750rem; /* 12px */}
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
   color: var(--text);
 }
 
 .hero-textbox{
   position: absolute;
   width: 40%;
-  height: 20%;
-  top: 20%;
-  left: 2.5%;
+  top: 45vh;
+  left: 16px;
   text-align: center;
   background-color: var(--primary);
 }
 
 .hero-cta {
+  height: 0;
   position: relative;
   font-size: var(--h3-font-size);
   left: 100%;
-  bottom: 17.5%;
+  bottom: 16px;
   display: inline-block;
   padding: 10px 20px;
   margin: 10px;
@@ -169,6 +176,26 @@ small {font-size: 0.750rem; /* 12px */}
   object-fit: cover;
 }
 
-.overlay:hover{
-  
+.overlay{
+  opacity: 0;
+  display: flex;
+  position: relative;
+  top: -50%;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.overlay-tall{
+  top: -57.5%;
+}
+
+.background-image:hover img{
+  opacity: 0.3;
+}
+
+.background-image:hover .overlay{
+  opacity: 1;
 }
