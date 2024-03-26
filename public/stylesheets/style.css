@@ -28,6 +28,8 @@ body {
   background-color: var(--background);
   color: var(--text);
   position: absolute;
+  width: auto;
+  height: auto;
 }
 
 h1, h2, h3, h4, h5 {

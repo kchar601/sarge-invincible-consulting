@@ -45,3 +45,12 @@ app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 
 })
+
+app.get('/about', (req, res) => {
+  res.render('about');
+});
+
+app.get('/contact', (req, res) => {
+  res.render('contact');
+});
+
