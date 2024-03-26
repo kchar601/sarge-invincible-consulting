@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 var cookie = require('cookie');
 const nodemailer = require('nodemailer');
 const app = express()
-const port = 3000
+const port = 80
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
