@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Castoro:700|Noto%20Sans:400');
 
-.navWrapper {
+.navWrapper, footer {
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -20,7 +20,7 @@
     justify-content: space-between;
 }
 
-.navbar-ul {
+.navbar-ul, .footer-ul {
     display: flex;
     list-style-type: none;
     padding: 0;
@@ -82,7 +82,7 @@
     display: flex;
 }
 
-.navbar-logo h1{
+.navbar-logo h1, .navbar-logo h2{
     margin: 8px;
     font-family: 'Castoro';
     font-size: var(--h3-font-size);
@@ -107,6 +107,16 @@
     color: var(--secondary);
 }
 
+.copyRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11.36px;
+    padding: 32px;
+    background: var(--primary);
+    margin: 0px;
+}
+
 @media only screen and (max-width: 720px) {
     .navWrapper {
         display: grid;
@@ -126,6 +136,15 @@
         margin: 0px;
         margin-bottom: 8px;
         width: fit-content;
+    }
+
+    .footer-ul {
+        flex-direction: column;
+        gap: 8px;
+        margin: 0px;
+        margin-bottom: 8px;
+        width: calc(100% - 16px);;
+        justify-content: center;
     }
 
     .hidden {
@@ -156,6 +175,7 @@
 
     .mainNav{
         width: fit-content;
+        align-self: center;
     }
 
     .navbar-img{

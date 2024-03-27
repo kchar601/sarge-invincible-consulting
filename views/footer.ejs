@@ -1,19 +1,19 @@
+<link rel="stylesheet" href="/stylesheets/navbar.css">
 <footer>
-    <div class="footer-gridContainer">
-        <div class="footer-logo">
-            <a href="/"><img src="/images/logo.png" alt="logo"></a>
-            <h1 class="footer-navTitle">Sarge's Invincible Consulting</h1>
-            <link rel="stylesheet" href="/stylesheets/footer.css">
-        </div>
-        <ul class="footer-navBar">
+    <nav class="navbar-nav">
+        <a href='/' class="navbar-logo">
+            <img src="/images/logo.png" class="navbar-img">
+            <h2>Sarge's Invincible Consulting</h2>
+        </a>
+        <ul class="footer-ul">
             <% ['Home', 'Portfolio', 'Services', 'About', 'Contact'].forEach(element => { %>
-                <li class="navItem <% if (element == currentPage) { %>active<% } %>">
-                    <a href="/<% if (element == currentPage) { %>#<% } else { %><%= element %><% } %>">
+                <a class="mainNav <% if (element == currentPage) { %>active<% } %>" href="/<% if (element == currentPage) { %>#<% } else { %><%= element %><% } %>">
+                    <li class="navbar-li">
                       <%= element %>
-                    </a>
-                  </li>
+                    </li>
+                  </a>
             <% }); %>
         </ul>
-    </div>
-    <p class="copyRight">&copy; 2024 Sarge's Invincible Consulting</p>
+    </nav>
 </footer>
+<p class="copyRight">&copy; 2024 Sarge's Invincible Consulting</p>
