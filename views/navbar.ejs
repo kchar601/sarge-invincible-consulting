@@ -6,11 +6,13 @@
             <h1>Sarge's Invincible Consulting</h1>
         </a>
         <ul class="hidden navbar-ul">
-            <a class="mainNav" href='/'><li class="navbar-li">Home</li></a>
-            <a class="mainNav" href='/Portfolio'><li class="navbar-li">Portfolio</li></a>
-            <a class="mainNav" href='/Services'><li class="navbar-li">Services</li></a>
-            <a class="mainNav" href='/About'><li class="navbar-li">About</li></a>
-            <a class="mainNav" href='/Contact'><li class="navbar-li">Contact</li></a>
+            <% ['Home', 'Portfolio', 'Services', 'About', 'Contact'].forEach(element => { %>
+                <a class="mainNav <% if (element == currentPage) { %>active<% } %>" href="/<% if (element == currentPage) { %>#<% } else { %><%= element %><% } %>">
+                    <li class="navbar-li">
+                      <%= element %>
+                    </li>
+                  </a>
+            <% }); %>
         </ul>
     </nav>
     <button class="hamburger navbar-button">

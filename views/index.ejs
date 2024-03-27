@@ -9,7 +9,7 @@
 </head>
 <body>
     <%- include('navbar', {currentPage: 'Home'}); %>
-    <div class="hero |grid|"> <!-- hero -->
+    <div class="hero"> <!-- hero -->
         <img src="/images/hero.jpg" alt="Hero Image" class="hero-img">
         <div class="hero-cta">Contact Sarge Today!
             <a href="/contact" class="button">Contact</a>
@@ -56,3 +56,15 @@
     <%- include('footer', {currentPage: 'Home'}); %>
 </body>
 </html>
+
+<style>
+    @media screen and (max-width: 700px){
+        .grid-2-narrow{
+            grid-template-columns: 1fr;
+            margin-top: 64px;
+        }
+        .grid-2 {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

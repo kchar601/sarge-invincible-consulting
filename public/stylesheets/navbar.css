@@ -4,8 +4,8 @@
     display: flex;
     width: 100%;
     flex-direction: row;
-    background-color: #303829;
-    color: #f4fbef;
+    background-color: var(--primary);
+    color: var(--text);
     position: sticky;
     position: -webkit-sticky;
     top: 0;
@@ -41,13 +41,13 @@
     margin-top: auto;
     margin-bottom: auto;
     text-decoration: none;
-    color: #f4fbef;
+    color: var(--text);
     border-radius: 8px;
     font-family: 'Noto Sans';
 }
 
 .mainNav:hover, .mainNav:active, .mainNav:focus {
-    background-color: #4d5a4a;
+    background-color: var(--primary-hover);
     font-weight: bold;
     animation: moving 5s infinite;
     -webkit-animation: moving .5s ease-in-out infinite alternate;
@@ -65,15 +65,15 @@
 }
 
 .navbar-button{
-    background-color: #ad9d34;
+    background-color: var(--secondary);
     border: none;
-    color: #0e1807;
-    font-size: 1.333rem;
+    color: var(--background);
+    font-size: var(--h5-font-size);
     font-family: 'Castoro';
 }
 
 .navbar-button:hover, .navbar-button:active, .navbar-button:focus{
-    background-color: #d4c24e;
+    background-color: var(--secondary-hover);
     animation: moving 5s infinite;
     -webkit-animation: moving .5s ease-in-out infinite alternate;
 }
@@ -85,7 +85,7 @@
 .navbar-logo h1{
     margin: 8px;
     font-family: 'Castoro';
-    font-size: 2.369rem;
+    font-size: var(--h3-font-size);
     text-wrap: nowrap;
     width: fit-content;
     display: flex;
@@ -103,13 +103,21 @@
 .hidden {
 }
 
+.mainNav.active{
+    color: var(--secondary);
+}
+
 @media only screen and (max-width: 720px) {
     .navWrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 4fr 1fr;
         height: fit-content;
         padding: 0px;
         margin-left: 0px;
+    }
+
+    .navbar-logo h1{
+        display: none;
     }
 
     .navbar-ul {
