@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Page with Navbar</title>
+    <title>Sarge's Invincible Consulting</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
 </head>
@@ -16,7 +16,7 @@
         </div>
         <div class="hero-textbox">
             <h3 class="my-16">Empowering Innovations in Silicon: Your ASIC Design Architect</h3>
-            <p class="mx-32">Dive into the future of semiconductor technology with Sarge's Invincible Consulting. With over two decades of pioneering experience, we specialize in bringing your most complex ASIC designs to life. From architecture to verification, we offer a comprehensive suite of services tailored to navigate the intricacies of digital design. Our commitment to excellence ensures your projects not only meet but exceed industry standards. Partner with us to transform your ideas into reality and lead the charge in the next wave of digital innovation.</p>
+            <p class="mx-32">Dive into the future of semiconductor technology with Sarge's Invincible Consulting. With over 35 years of pioneering experience, we specialize in bringing your most complex ASIC designs to life. From architecture to verification, we offer a comprehensive suite of services tailored to navigate the intricacies of digital design. Our commitment to excellence ensures your projects not only meet but exceed industry standards. Partner with us to transform your ideas into reality and lead the charge in the next wave of digital innovation.</p>
         </div>
     </div>
     <div class="grid-2-narrow m-32 g-16">
@@ -34,7 +34,7 @@
             <img src="/images/DRILL_SERGEANT.jpg" alt="Hero Image">
         </div>
     </div>
-    <div class="grid-2 m-32 mt-64 g-16"> <!-- link list -->
+    <div class="grid-2 mx-32 my-64 g-16"> <!-- link list -->
         <div class="|column|">
             <a href="/ASICDesign" class="background-image">
                 <img src="/images/design.jpg" class="grid-img">
@@ -58,6 +58,163 @@
 </html>
 
 <style>
+    .hero-img{
+  position: absolute;
+  top: 80px;
+  right: 16px;
+  width: 80%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--text);
+}
+
+.hero-textbox{
+  position: absolute;
+  width: 40%;
+  top: 45vh;
+  left: 16px;
+  text-align: center;
+  background-color: var(--primary);
+  padding: 16px;
+}
+
+.hero-cta {
+  height: 0;
+  position: relative;
+  font-size: var(--h3-font-size);
+  left: 14%;
+  top: 27%;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  color: var(--text);
+}
+
+.hero-cta a{
+  text-decoration: none;
+  background-color: var(--secondary);
+  color: var(--background);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hero-cta a:hover{
+  background-color: var(--secondary-hover);
+}
+
+.grid-2-rows{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay{
+  opacity: 0;
+  display: flex;
+  position: relative;
+  top: -60%;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.overlay-tall{
+  top: -57.5%;
+}
+
+.background-image:hover img{
+  opacity: 0.25;
+}
+
+.background-image:hover .overlay{
+  opacity: 1;
+}
+
+.background-image h3{
+  text-decoration: none;
+  color: var(--text);
+}
+
+@media screen and (max-width: 1220px){
+  .hero-cta{
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .hero-img{
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+  }
+  
+}
+
+@media screen and (max-width: 770px){
+  .hero{
+    height: 70vh;
+  }
+
+  .hero-img{
+    top: 0;
+    width: 100%; /* Makes the image stretch across the screen */
+    height: 30vh; /* Reduces height to act more like a banner */
+    object-fit: cover; /* Ensures the image covers the designated area without distortion */
+  }
+
+  .hero-cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    position: relative;
+    top: 40%;
+    left: 0;
+    text-align: center;
+  }
+  .hero-cta a{
+    text-decoration: none;
+    background-color: var(--secondary);
+    color: var(--background);
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    height: fit-content;
+    width: fit-content;
+    align-self: center;
+  }
+  
+  .hero-textbox{
+    display: flex;
+    flex-direction: column;
+    top: 35vh; /* Resets the top position */
+    left: 0; /* Aligns to the left */
+    height: fit-content;
+    width: calc(100% - 32px);
+    text-align: center; /* Center the text within */
+    margin-top: -5vh; /* Optional: Adjust based on your design preference */
+    padding: 16px; /* Ensures padding is consistent */
+    background-color: var(--primary); /* Background to ensure text readability */
+  }
+}
     @media screen and (max-width: 700px){
         .grid-2-narrow{
             grid-template-columns: 1fr;
@@ -77,6 +234,12 @@
         }
         .hero-cta{
             top: 45%;
+        }
+        .background-image img{
+            opacity: 0.25;
+        }
+        .background-image .overlay{
+            opacity: 1;
         }
     }   
 </style>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarge's Services</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+</head>
+<body>
+    <%- include('navbar', {currentPage: 'Services'}); %>
+    <div class="heading">
+        <h1>Sarge's Services</h1>
+        <p>Sarge's Invincible Consulting offers a comprehensive range of services specializing in ASIC architecture, digital design, and verification engineering. With over 35 years of experience in the semiconductor industry, Sarge provides expertise in all aspects of ASIC design, including architecture, design, and verification. From startups to Fortune 500 firms, Sarge has worked with companies of all sizes, creating accurate architectural or behavioral models for ASICs to aid in performance analysis and functional verification. With extensive knowledge in verification and familiarity with all major Hardware Verification Languages (HVLs), Sarge is committed to delivering top-notch ASIC solutions.</p>
+    </div>
+    <div>
+        <h2>ASIC Architecture</h2>
+        <h3>The Importance of Architectural Decisions in ASIC Design</h3>
+        <p>Architectural decisions in ASIC design have a critical impact, significantly influencing the final product's performance and compliance with design specifications. These foundational choices require careful consideration and precise modeling to avoid falling short of performance goals or failing to meet design criteria.</p>
+        <h3>Expertise in Action: Meet Sarge</h3>
+        <p>Sarge is an expert in ASIC architectural design, known for his ability to craft dual-purpose models that streamline both architectural exploration and verification processes. His extensive experience and strategic approach ensure that designs not only meet their intended goals but also adhere to the highest standards of efficiency.</p>
+        <h3>Highlighted Projects</h3>
+        <ul>
+            <li>Performance Analysis: Lead on the L2 cache performance analysis for the G4 PowerPC chip at Apple.</li>
+            <li>Innovative Models: Developer of models for various components, including a USB 2.0 hub, networking memory block, and I2C master/slave interface.</li>
+        </ul>
+        <h3>Engage with Sarge for Superior ASIC Design</h3>
+        <p>Collaborating with Sarge from the start guarantees a cost-effective and strategic approach to ASIC design. His involvement promises to deliver significant benefits, optimizing your project for success. Contact Sarge today to elevate your architectural efforts.</p>
+    </div>
+    <div>
+        <h2>ASIC Design</h2>
+        <h3>Strategic Design Planning with Sarge</h3>
+        <h4>Efficient Architecture & Microarchitecture Planning</h4>
+        <p>Sarge dedicates substantial time to meticulously planning both the architecture and microarchitecture of a design. This upfront investment ensures that when it's time to translate these plans into code, the process unfolds seamlessly. By thoroughly considering all interactions early on, Sarge guarantees a smooth design process from start to finish.</p>
+        <h4>Expertise Rooted in Experience</h4>
+        <p>Starting his career in schematic capture, Sarge possesses a profound understanding of the gates that will result from synthesized RTL. His experience has led to the development of well-honed guidelines, allowing him to produce RTL that is not only easy to understand but also straightforward to synthesize. This depth of knowledge ensures the creation of efficient and effective designs.</p>
+        <h4>Preventing Problems Before They Arise</h4>
+        <p>Involving Sarge in your design team means avoiding the last-minute scramble to identify issues as deadlines approach. His disciplined approach is key to identifying and resolving potential problems early in the design process, preventing them from being deeply embedded in the RTL.</p>
+        <h3>Partner with Sarge for Design Excellence</h3>
+        <p>Engage with Sarge to leverage his expertise for your design project. His proactive and strategic approach ensures a streamlined process, from conceptual planning to final synthesis. Contact Sarge today to discuss how his skills can contribute to the success of your design.</p>
+    </div>
+    <div>
+        <h2>Verification Engineering</h2>
+        <h3>The Challenge of Verification in ASIC Design</h3>
+        <h4>Insights from a Student: The Complexity of Verification</h4>
+        <p>A poignant observation from one of Sarge's students highlights a fundamental challenge in ASIC design: "Finding bugs is more difficult than writing bugs." This statement, though simple, underscores the intricate nature of verification in today's complex ASIC projects. With design and protocol specifications more voluminous than a Harry Potter novel, the task of verification has grown increasingly daunting.</p>
+        <h4>Embracing Coverage-Driven Verification</h4>
+        <p>Introduced to the coverage-driven approach in 2000, Sarge has since been a staunch advocate for this methodology. Recognizing it as the most effective strategy to manage the complexities of modern designs, he champions this approach to ensure thorough and efficient verification processes.</p>
+        <h4>Streamlining Design and Verification</h4>
+        <p>Sarge's strategy involves working in tandem with the RTL design phase to develop a behavioral model early on. This parallel approach enables the verification team to commence test creation concurrently with RTL development, allowing for immediate testing once the RTL is finalized. This method not only accelerates the verification process but also enhances its effectiveness.</p>
+        <h3>Sarge's Expertise and Leadership in Verification</h3>
+        <h4>A Leader in High-Level Verification Languages (HVLs)</h4>
+        <p>With extensive experience across all major HVLs used in production today, Sarge is particularly renowned for his expertise in Specman. His proficiency with this tool has not only contributed to his success in verification but has also positioned him as a key educator and mentor in the field.</p>
+        <h4>Commitment to Education and Collaboration</h4>
+        <p>Continuing to share his knowledge and expertise, Sarge teaches Specman to those eager to learn and remains an active and proud member of Cadence's Verification Alliance. His dedication to advancing the practice of verification through both his work and teaching highlights his commitment to the field's future.</p>
+        <h3>Partner with an Expert in Verification</h3>
+        <p>Engage with Sarge to navigate the complexities of ASIC verification. His innovative approaches and deep expertise offer a pathway to efficient and effective verification strategies. Contact Sarge to learn how his guidance and skills can elevate your ASIC design and verification efforts.</p>
+    </div>
+
+    <%- include('footer', {currentPage: 'Services'}); %>
+</body>
+</html>
+
+<style>
+    body{
+        width: 100%;
+    }
+    .heading{
+        width: 80%;
+        margin: 0 auto 64px;
+    }
+    .heading p{
+        margin-left: 96px;
+    }
+</style>

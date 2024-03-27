@@ -78,11 +78,11 @@
     -webkit-animation: moving .5s ease-in-out infinite alternate;
 }
 
-.navbar-logo{
+.navbar-logo, .footer-logo{
     display: flex;
 }
 
-.navbar-logo h1, .navbar-logo h2{
+.navbar-logo h2, .footer-logo h2{
     margin: 8px;
     font-family: 'Castoro';
     font-size: var(--h3-font-size);
@@ -126,7 +126,7 @@
         margin-left: 0px;
     }
 
-    .navbar-logo h1{
+    .navbar-logo h2{
         display: none;
     }
 

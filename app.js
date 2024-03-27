@@ -46,11 +46,50 @@ app.listen(port, () => {
 
 })
 
-app.get('/about', (req, res) => {
+app.get('/Home', (req, res) => {
+  res.render('index');
+});
+
+app.get('/Portfolio', (req, res) => {
+  res.render('portfolio');
+});
+
+app.get('/Services', (req, res) => {
+  res.render('services');
+});
+
+app.get('/About', (req, res) => {
   res.render('about');
 });
 
-app.get('/contact', (req, res) => {
+app.get('/Contact', (req, res) => {
   res.render('contact');
 });
 
+app.get('/sitemap.xml', function(req, res) {
+  res.sendFile('sitemap.xml' , { root : __dirname});
+});
+
+app.post('/api/sendMsg', async (req, res) => {
+  try {
+    res.setHeader('Content-Type', 'application/json');
+    const email = req.body.email;
+    const name = req.body.name;
+    const message = req.body.msg;
+    const html = `<p><b>Name:</b> ${name}</p><p><b>Return email:</b> ${email}</p><p><b>Message:</b> ${message}</p>`;
+
+    const mailOptions = {
+      from: 'user@kavcak.com',
+      to: 'sarge@kavcak.com',
+      subject: 'Website Contact Form',
+      html: html
+    };
+    
+    await transporter.sendMail(mailOptions);
+    console.log('Message sent');
+    res.json({status: "success"});
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({status: "error", message: "Failed to send message"});
+  }
+});  

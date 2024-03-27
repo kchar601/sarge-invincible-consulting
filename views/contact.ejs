@@ -6,8 +6,103 @@
     <title>Contact Sarge</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <script src="/javascripts/loader.js" defer></script>
+    <script src="/javascripts/emailForm.js" defer></script>
 </head>
 <body>
-    <%- include('navbar', {currentPage: 'Home'}); %>
+    <%- include('navbar', {currentPage: 'Contact'}); %>
+    <div class="loaderWrapper loadItem">
+        <div class="loader loadItem">
+            <span class="dot loadItem"></span>
+            <span class="dot loadItem"></span>
+            <span class="dot loadItem"></span>
+        </div>
+    </div>
+    <h1 class="heading">Contact Sarge</h1>
+    <div class="formWrapper">
+        <div>
+            <h2 class="heading">Get in Touch</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="nameInput" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="emailInput" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="msgInput" name="message" required></textarea>
+            </form>
+            <div class="heading">
+                <button type="submit" onclick="return checkMsg()">Submit</button>
+            </div>
+        </div>
+        <div>
+            <h2 class="heading">Contact Information</h2>
+            <p class="md-pg">Phone: 512-266-3734</p>
+            <p class="md-pg">Email: <a class="underline" href="mailto:Sarge@Kavcak.com">sarge@kavcak.com</a></p>
+            <p class="md-pg">Cell: 512-422-7342</p>
+        </div>
+    </div>
+
+
+    <%- include('footer', {currentPage: 'Home'}); %>
 </body>
 </html>
+
+<style>
+    body{
+        width: 100%;
+    }
+
+    .formWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+        margin: 0 auto 128px;
+        border-radius: 8px;
+        background: var(--primary);
+        padding: 16px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        border-right: var(--text) 2px solid;
+    }
+
+    input, textarea{
+        margin: 8px;
+        padding: 8px;
+        border-radius: 8px;
+        border: none;
+        background: var(--text);
+        font-family: 'Noto Sans';
+        font-size: var(--body-font-size);
+    }
+
+    textarea{
+        resize: vertical;
+    }
+
+    button{
+        margin: 8px;
+        padding: 16px;
+        border-radius: 8px;
+        border: none;
+        background: var(--secondary);
+        color: var(--background);
+        font-family: 'Noto Sans';
+        font-size: var(--h5-font-size);
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .md-pg{
+        font-size: var(--h4-font-size);
+        text-align: center;
+        margin: 64px 0;
+    }
+
+    .underline{
+        text-decoration: underline;
+    }
+</style>
