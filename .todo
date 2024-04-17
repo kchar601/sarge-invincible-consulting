@@ -1,0 +1,78 @@
+{
+  "todotree": {
+    "tree": [
+      {
+        "key": 1713225455910,
+        "children": [],
+        "todo": {
+          "content": "Home page",
+          "id": 1713225455910,
+          "level": "default",
+          "done": true,
+          "start": 1713225455910,
+          "focus": false,
+          "end": 1713225492401
+        }
+      },
+      {
+        "key": 1713225465166,
+        "children": [],
+        "todo": {
+          "content": "About",
+          "id": 1713225465166,
+          "level": "default",
+          "done": false,
+          "start": 1713225465166
+        }
+      },
+      {
+        "key": 1713225472513,
+        "children": [],
+        "todo": {
+          "content": "Portfolio",
+          "id": 1713225472513,
+          "level": "default",
+          "done": false,
+          "start": 1713225472513
+        }
+      },
+      {
+        "key": 1713225478429,
+        "children": [],
+        "todo": {
+          "content": "Services",
+          "id": 1713225478429,
+          "level": "default",
+          "done": false,
+          "start": 1713225478429
+        }
+      },
+      {
+        "key": 1713225482637,
+        "children": [],
+        "todo": {
+          "content": "Contact",
+          "id": 1713225482637,
+          "level": "default",
+          "done": true,
+          "start": 1713225482637,
+          "focus": false,
+          "end": 1713225495189
+        }
+      }
+    ],
+    "expandKeys": [],
+    "schema": "https://github.com/Saber2pr/vsc-ext-todolist/blob/master/src/api/type.ts#L3",
+    "add_mode": "bottom",
+    "virtual": false,
+    "timelines": [],
+    "showLine": false,
+    "playFontSize": 24,
+    "title": ".todo",
+    "autoSort": false,
+    "showEndTime": false,
+    "simpleMode": false,
+    "lang": "en",
+    "version": "1713225495226"
+  }
+}
