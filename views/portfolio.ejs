@@ -6,35 +6,47 @@
     <title>Sarge's Portfolio</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
 </head>
 <body>
     <%- include('navbar', {currentPage: 'Portfolio'}); %>
-    <h1>Sarge's Portfolio</h1>
-    <h2>Subheading</h2>
-    <p>Content</p>
+    <h1 class="ta-c">Sarge's Portfolio</h1>
+    <h3 class="ta-c">Explore Sarge's Diverse Portfolio of Proven Solutions</h3>
+    <sl-carousel pagination navigation mouse-dragging loop>
+        <% resumeData.WorkExperience.forEach((job) => {
+            %>
+                <sl-carousel-item>
+                    <div class="carousel-content">
+                        <h4><%= job.Company %></h4>
+                        <p><%= job.StartDate %> - <%= job.EndDate %></p>
+                        <p><%= job.Location %></p>
+                        <p><%= job.Description %></p>
+                    </div>
+                </sl-carousel-item>
+            <%
+        } ); %>
+    </sl-carousel>
+    <div class="m-64 mw-70 flexCol">
+    <% 
+    if (resumeData && resumeData.ProjectHighlight && resumeData.ProjectHighlight.length > 0) {
+        let randIndex = Math.floor(Math.random() * resumeData.ProjectHighlight.length);
+        let projectHighlight = resumeData.ProjectHighlight[randIndex];  
+        let descriptionWithParagraphs = projectHighlight.Description.replace(/%p/g, '</p><p>');
+        %>
+            <img src="<%= projectHighlight.Image %>" alt="<%= projectHighlight.ProjectTitle %>" class="mw-70">
+            <p><%- descriptionWithParagraphs %></p>
 
-    <div class="grid">
-        <ul>
-            <li>Item 1
-                <p>Brief Description</p>
-            </li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-            <li>Item 5</li>
-            <li>Item 6</li>
-        </ul>
+        <% 
+
+    } else {
+        console.log('No project highlights found');
+    }
+    %>
     </div>
 
-    <div>Timeline?</div>
-
-    <div class="grid-2">
-        <div class="column">
-            <h3>Project Highlight: </h3>
-            <p>Content</p>
-        </div>
-        <img src="/images/placeholder.png" alt="Placeholder Image">
-    </div>
+    <h3 class="ta-c">Sarge's Full Resume:</h3>
+    <button class="ctabtn"><a href="/kavcak_resume.pdf">View Resume</a></button>
 
     <%- include('footer', {currentPage: 'Portfolio'}); %>
 </body>
@@ -43,5 +55,106 @@
 <style>
     body{
         width: 100%;
+    }
+    body h3{
+        margin: 0 8px;
+    }
+    sl-carousel::part(navigation-button){
+        color: var(--text);
+    }
+    sl-carousel::part(pagination){
+        padding: 16px 0 0;
+    }
+    .ta-c{
+        text-align: center;
+    }
+    .carousel-content{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        border: 4px solid var(--primary);
+        border-radius: 8px;
+        padding: 32px;
+    }
+    .carousel-content *{
+        margin: 8px 0 0;
+    }
+    sl-carousel{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .grid-2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        gap: 16px;
+    }
+    .grid-2 div{
+        margin: auto;
+        align-self: center;
+        padding: 8px;
+    }
+    img{
+        margin: auto;
+        align-self: center;
+        width: 100%;
+    }
+    .mw-70{
+        max-width: 70%;
+        margin: 0 auto;
+    }
+    .m-64{
+        margin: 64px auto;
+    }
+    .flexCol{
+        display: flex;
+        flex-direction: column;
+    }
+    .ctabtn{
+        display: flex;
+        justify-content: center;
+        margin: 32px auto 64px;
+        background-color: var(--secondary);
+        border: none;
+        border-radius: 4px;
+    }
+    .ctabtn a{
+        color: var(--background);
+        text-decoration: none;
+        padding: 8px 16px;
+        font-family: var(--body-font-family);
+        font-size: var(--h5-font-size);
+    }
+    .ctabtn:hover{
+        background-color: var(--secondary-hover);
+    }
+    @media (max-width: 1000px){
+        sl-carousel{
+            width: 90%;
+        }
+    }
+    @media (max-width: 800px){
+        sl-carousel{
+            width: 100%;
+        }
+        sl-carousel::part(base){
+            --aspect-ratio: 9/9;
+            gap: 0;
+        }
+        sl-carousel-item{
+            padding: 0 16px;
+        }
+    }
+    @media (max-width: 540px){
+        sl-carousel::part(base){
+            --aspect-ratio: 9/16;
+        }
+    }
+    @media (max-width: 600px){
+        .grid-2{
+            grid-template-columns: 1fr;
+        }
     }
 </style>

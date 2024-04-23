@@ -117,6 +117,12 @@
     margin: 0px;
 }
 
+@media screen and (max-width: 1120px){
+    .navbar-logo h2, .footer-logo h2 {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 720px) {
     .navWrapper {
         display: grid;
@@ -124,18 +130,20 @@
         height: fit-content;
         padding: 0px;
         margin-left: 0px;
+        border-bottom: 2px solid var(--background);
     }
 
-    .navbar-logo h2{
+    .navbar-logo h2, .footer-logo h2 {
         display: none;
     }
 
     .navbar-ul {
         flex-direction: column;
         gap: 8px;
-        margin: 0px;
-        margin-bottom: 8px;
         width: fit-content;
+        justify-content: center;
+        margin: auto;
+        padding-left: 66px;
     }
 
     .footer-ul {
@@ -154,10 +162,10 @@
     .navbar-li {
         display: block;
         text-align: left;
-        width: 100%;
+        width: fit-content;
     }
 
-    .navbar-logo {
+    .navbar-logo, .footer-logo {
         width: fit-content;
         height: fit-content;
     }

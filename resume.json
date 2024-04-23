@@ -1,0 +1,107 @@
+{
+    "WorkExperience": [{
+        "StartDate": "1/01",
+        "EndDate": "present",
+        "JobTitle": "President",
+        "Company": "Sarge's Invincible Consulting",
+        "Location": "Austin, TX",
+        "Description": "Self-employed consultant available for all facets of ASIC and/or microprocessor architecture, design, verification, and training."
+      },
+      {
+        "StartDate": "8/21",
+        "EndDate": "7/22",
+        "JobTitle": "Consultant",
+        "Company": "Alpha Omega Semiconductor",
+        "Location": "Austin, TX",
+        "Description": "Responsible for all aspects of verification for the Digital Power group. Duties include creating and maintaining several digital and mixed-signal test benches in Specman for a new revision of a voltage regulator. Instructed remote verification team on all aspects of testbench. Updated AMS simulation environment. Ran and maintained full chip regression environment via vManager."
+      },
+      {
+        "StartDate": "1/21",
+        "EndDate": "7/21",
+        "JobTitle": "Consultant",
+        "Company": "Cruise",
+        "Location": "San Francisco, CA",
+        "Description": "Responsible for integration of numerous peripheral IP blocks into a large scale SOC testbench for driverless vehicles. Required knowledge of typical peripheral protocols (SPI/UART/I2C), as well as C/UVM for system level testbench."
+      },
+      {
+        "StartDate": "5/20",
+        "EndDate": "12/20",
+        "JobTitle": "Consultant",
+        "Company": "Ambiq Micro",
+        "Location": "Austin, TX",
+        "Description": "Responsible for verification of USB 2.0 block on Apollo4 SoC, as well as flash memory interface. Duties included device driver development to move USB controller from boot through enumeration to responding to all types of transactions. Memory interface was verified against a number of commercially available flash and PSRAM devices."
+      },
+      {
+        "StartDate": "4/18",
+        "EndDate": "9/19",
+        "JobTitle": "Consultant",
+        "Company": "Alpha Omega Semiconductor",
+        "Location": "Austin, TX",
+        "Description": "Responsible for all aspects of verification for the Digital Power group. Duties include creating and maintaining several digital and mixed-signal test benches in Specman for several voltage regulator products in the group. Created PMBus eVC for interfacing with parts more easily than what was previously available. Integrated with VRxx/PWM IP from Intel to help verify functionality."
+      },
+      {
+        "StartDate": "1/18",
+        "EndDate": "4/18",
+        "JobTitle": "Student",
+        "Company": "Cadence Connections Portable Stimulus Certification Program",
+        "Description": "Completed training for the Perspec portable stimulus tool from Cadence over the course of several months. Online instruction from Cadence personnel, as well as lab and homework assignments to be completed for familiarization with the tool."
+      },
+      {
+        "StartDate": "11/15",
+        "EndDate": "11/17",
+        "JobTitle": "Consultant",
+        "Company": "Cirrus Logic",
+        "Location": "Austin, TX",
+        "Description": "Helped create and maintain mixed-signal UVM testbenches for several digital amplifier projects. Required understanding of amplifier behavior and response to different parametric settings. Created self-checking monitors to track proper voltage values throughout operation. Adapted testbenches for use in a Verilog-AMS simulation environment."
+      },
+      {
+        "StartDate": "9/14",
+        "EndDate": "6/15",
+        "JobTitle": "Consultant",
+        "Company": "Maxim Integrated",
+        "Location": "Austin, TX",
+        "Description": "Created a self-checking mixed-signal UVM testbench using SystemVerilog for a voltage regulator. Required full understanding of chip to create reference model for all top level checking. Created sequences of PMBus commands to drive functionality of device, and implemented coverage to ensure completeness."
+      },
+      {
+        "StartDate": "1/14",
+        "EndDate": "7/14",
+        "JobTitle": "Consultant",
+        "Company": "Medtronic Inc.",
+        "Location": "Minneapolis, MN",
+        "Description": "Designed two block level UVM test benches using Specman. One for an encryption module, and one for an SPI module. Both required creation of BFMs, monitors, scoreboards, and sequence libraries. Also helped integrate both environments into the top level test environment. Used vPlanner to create the test plan, as well as eManager to show completion metrics."
+      },
+      {
+        "StartDate": "3/13",
+        "EndDate": "10/13",
+        "JobTitle": "VP Engineering",
+        "Company": "Logic Refinery",
+        "Location": "Austin, TX",
+        "Description": "Helped implement the Strategen verification tool. Responsibilities include customer interface, UVM-SV testbench integration, tool capability definition, and future roadmap planning."
+      }],
+      "ProjectHighlight" : [{
+        "ProjectTitle": "Toshiba",
+        "Description": "The Playstation3 project was made up of 3 different chips:  The Cell chip, the graphics chip, and the I/O chip.  Each of these designs were being created and simulated on their own by different design teams.  A need was identified to simulate all 3 of these chips together before tapeout, so that the all the interfaces between the chips would work smoothly. %p Sarge was called in to lead up the cosimulation team, which comprised engineers from Sony, IBM, Toshiba, as well as some contractors.  He oversaw the continued creation of the cosimulation environment, interfaced with company leaders back in Japan, and integrated a scoreboard which found numerous problems with the original environment.",
+        "Image": "images/toshiba.png"
+      },
+      {
+        "ProjectTitle": "Boeing",
+        "Description": "Boeing was looking for someone to help with their adoption of Specman to help verifiy several of their FPGA designs.  They were starting a new project, and it was the perfect time to introduce Specman into the flow. %p Sarge was brought in to show the verification team how they could best use Specman to achieve their goals.  Sarge helped the verification team improve the current verification environment by writing new tests and checks.  When the need arose to use the verification environment for tasks that had been slated for FPGA work, Sarge wrote a new, stripped down testbench that could simulate thousands of times faster than the current one.  This allowed the verification team to take over some of the FPGA work which would've been dropped otherwise. %p All throughout the engagement, Sarge continued to educate the team on methodologies and techniques to use to improve their testbench and test writing efficiency.",
+        "Image": "images/boeing.png"
+      },
+      {
+        "ProjectTitle": "AMD",
+        "Description": "AMD was looking for some help with some of their 3rd party suppliers and customers.  A customer of theirs had voiced some concerns over some recent problems that had popped up.  Sarge was called in to help flush out the 3rd party's verification environment, since AMD did not have the requisite Specman expertise in house. %p After evaluating the current test plan and environment, Sarge saw a need to create many more scenarios than what was currently being simulated.  Sarge quickly put together an environment that laid on top of the company's currently existing code.  This higher level environment allowed Sarge to quickly create tests that would more thorougly and exhaustively test the device. %p He then created more coverage for this new environment that ensured that all interesting scenarios were being thoroughly exercised.  Upon seeing all the extensive new work being done to ensure design correctness, the customers worries were put to rest.",
+        "Image": "images/AMD.jpg"
+      },
+      {
+        "ProjectTitle": "Cisco",
+        "Description": "Cisco was looking for someone who could ramp up extremely quickly on their design and verification environment for one of their top end router ASICs.  Sarge came in, and within a week was writing tests. %p Cisco's main goal was to increase the current coverage on their ASICs, and Sarge was able to help them achieve this goal with the tests he wrote and the modifications he made to the environment. %p He met regularly with the designers to ensure that proper coverage for the RTL was being obtained.",
+        "Image": "images/cisco.png"
+      },
+      {
+        "ProjectTitle": "Cadence",
+        "Description": "In 2008, Cadence Teaching Services put together a program for the Brazilian government to teach IC-Design to some of the local residents.  The idea being that Brazil would then have a workforce in place to lure semiconductor companies to place design houses there. %p The program consisted of both theoretical and practical/tools components.  Sarge was chosen to be an instructor for the first two theoretical digital design segments, which covered the topics of Architecture and Design/Verification, as well as a number of the tools classes including Verilog, Specman, RTL Compiler, and Static Timing Analysis. %p Duties included teaching the classes, grading homeworks, leading the labs, and modifying all portions as necessary.  The work was highly intensive, but it allowed Sarge to draw on his past teaching experience, and share his knowledge with some very bright and eager students.",
+        "Image": "images/cadence.jpg"
+      }
+      ]
+  }

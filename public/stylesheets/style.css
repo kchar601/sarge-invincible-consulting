@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Castoro:700|Noto%20Sans:400');
+
 :root {
   --background: #0e1807;
   --text: #f4fbef;
@@ -15,10 +17,8 @@
   --h5-font-size: 1.333rem;
   --small-font-size: 0.750rem;
   --body-font-size: 1rem;
-
+  --body-font-family: 'Noto Sans';
 }
-
-@import url('https://fonts.googleapis.com/css?family=Castoro:700|Noto%20Sans:400');
 
 body {
   font-family: 'Noto Sans';
@@ -68,6 +68,11 @@ small {font-size: 0.750rem; /* 12px */}
 .mx-32{
   margin-left: 32px;
   margin-right: 32px;
+}
+
+.mx-64{
+  margin-left: 64px;
+  margin-right: 64px;
 }
 
 .my-64{
@@ -135,5 +140,9 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.ta-c{
   text-align: center;
 }

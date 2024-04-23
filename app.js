@@ -51,7 +51,8 @@ app.get('/Home', (req, res) => {
 });
 
 app.get('/Portfolio', (req, res) => {
-  res.render('portfolio');
+  const resumeData = require('./resume.json');
+  res.render('portfolio', {resumeData: resumeData});
 });
 
 app.get('/Services', (req, res) => {
