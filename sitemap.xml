@@ -6,27 +6,12 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kavcak.com/Portfolio</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://kavcak.com/Services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kavcak.com/Services/Design</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://kavcak.com/Services/Architecture</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://kavcak.com/Services/Verification</loc>
+    <loc>https://kavcak.com/Portfolio</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

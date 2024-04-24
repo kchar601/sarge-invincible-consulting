@@ -6,6 +6,7 @@
     <title>About Sarge</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <script src="/javascripts/lazyload.js" defer></script>
 </head>
 <body>
     <%- include('navbar', {currentPage: 'About'}); %>
@@ -23,10 +24,10 @@
                 <li><span class="bold">Community Involvement:</span> Active participation in Austin's DVclub underscores his commitment to staying at the forefront of verification trends.</li>
             </ul>
         </div>
-        <img src="/images/Sarge.jpeg" alt="Sarge" class="img-sarge">
+        <img src="/images/Sarge-low.jpeg" data-src="/images/Sarge.jpeg" alt="Sarge" class="img-sarge">
     </div>
     <div class="grid-2">
-        <img src="/images/sarge_awards.jpg" alt="Awards" class="img-sarge">
+        <img src="/images/sarge_awards-low.jpg" data-src="/images/sarge_awards.jpg" alt="Awards" class="img-sarge">
         <div>
             <h3>Education</h3>
             <ul>
@@ -49,7 +50,7 @@
             <a href="/portfolio">Portfolio</a>
             <a href="/services">Services</a>
         </div>
-        <img src="/images/baseball.jpeg" alt="Baseball" class="img-sarge">
+        <img src="/images/baseball-low.jpeg" data-src="/images/baseball.jpeg" alt="Baseball" class="img-sarge">
     </div>
     
     <%- include('footer', {currentPage: 'About'}); %>

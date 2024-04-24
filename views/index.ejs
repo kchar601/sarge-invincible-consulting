@@ -6,11 +6,12 @@
     <title>Sarge's Invincible Consulting</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <script src="/javascripts/lazyload.js" defer></script>
 </head>
 <body>
     <%- include('navbar', {currentPage: 'Home'}); %>
-    <div class="hero"> <!-- hero -->
-        <img src="/images/hero.jpg" alt="Hero Image" class="hero-img">
+    <div class="hero">
+        <img src="/images/hero-low.jpg" data-src="/images/hero.jpg" alt="Hero Image" class="hero-img">
         <div class="hero-cta">Contact Sarge Today!
             <a href="/contact" class="button">Contact</a>
         </div>
@@ -31,23 +32,23 @@
             </div>
         </div>
         <div class="|column| flex-center mb-64">
-            <img src="/images/DRILL_SERGEANT.jpg" alt="Hero Image">
+            <img src="/images/DRILL_SERGEANT-low.jpg" data-src="/images/DRILL_SERGEANT.jpg" alt="Hero Image">
         </div>
     </div>
     <div class="grid-2 mx-32 my-64 g-16"> <!-- link list -->
         <div class="|column|">
             <a href="/ASICDesign" class="background-image">
-                <img src="/images/design.jpg" class="grid-img">
+                <img src="/images/design-low.jpg" data-src="/images/design.jpg" class="grid-img">
                 <h3 class="overlay overlay-tall">ASIC Design</h3>
             </a>
         </div>
         <div class="grid-2-rows g-16">
             <a href="/Architecture" class="background-image">
-                <img src="/images/architecture.jpg" class="grid-img">
+                <img src="/images/architecture-low.jpg" data-src="/images/architecture.jpg" class="grid-img">
                 <h3 class="overlay">Architecture</h3>
             </a>
             <a href="/Verification" class="background-image">
-                <img src="/images/verification.png" class="grid-img">
+                <img src="/images/verification-low.png" data-src="/images/verification.png" class="grid-img">
                 <h3 class="overlay">Verification</h3>
             </a>
         </div>

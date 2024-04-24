@@ -81,27 +81,37 @@
       "ProjectHighlight" : [{
         "ProjectTitle": "Toshiba",
         "Description": "The Playstation3 project was made up of 3 different chips:  The Cell chip, the graphics chip, and the I/O chip.  Each of these designs were being created and simulated on their own by different design teams.  A need was identified to simulate all 3 of these chips together before tapeout, so that the all the interfaces between the chips would work smoothly. %p Sarge was called in to lead up the cosimulation team, which comprised engineers from Sony, IBM, Toshiba, as well as some contractors.  He oversaw the continued creation of the cosimulation environment, interfaced with company leaders back in Japan, and integrated a scoreboard which found numerous problems with the original environment.",
-        "Image": "images/toshiba.png"
+        "Image": "images/toshiba-low.png",
+        "HighRes": "images/toshiba.png",
+        "Alt": "Toshiba Logo"
       },
       {
         "ProjectTitle": "Boeing",
         "Description": "Boeing was looking for someone to help with their adoption of Specman to help verifiy several of their FPGA designs.  They were starting a new project, and it was the perfect time to introduce Specman into the flow. %p Sarge was brought in to show the verification team how they could best use Specman to achieve their goals.  Sarge helped the verification team improve the current verification environment by writing new tests and checks.  When the need arose to use the verification environment for tasks that had been slated for FPGA work, Sarge wrote a new, stripped down testbench that could simulate thousands of times faster than the current one.  This allowed the verification team to take over some of the FPGA work which would've been dropped otherwise. %p All throughout the engagement, Sarge continued to educate the team on methodologies and techniques to use to improve their testbench and test writing efficiency.",
-        "Image": "images/boeing.png"
+        "Image": "images/boeing-low.png",
+        "HighRes": "images/boeing.png",
+        "Alt": "Boeing Logo"
       },
       {
         "ProjectTitle": "AMD",
         "Description": "AMD was looking for some help with some of their 3rd party suppliers and customers.  A customer of theirs had voiced some concerns over some recent problems that had popped up.  Sarge was called in to help flush out the 3rd party's verification environment, since AMD did not have the requisite Specman expertise in house. %p After evaluating the current test plan and environment, Sarge saw a need to create many more scenarios than what was currently being simulated.  Sarge quickly put together an environment that laid on top of the company's currently existing code.  This higher level environment allowed Sarge to quickly create tests that would more thorougly and exhaustively test the device. %p He then created more coverage for this new environment that ensured that all interesting scenarios were being thoroughly exercised.  Upon seeing all the extensive new work being done to ensure design correctness, the customers worries were put to rest.",
-        "Image": "images/AMD.jpg"
+        "HighRes": "images/AMD.jpg",
+        "Image": "images/AMD-low.jpg",
+        "Alt": "AMD Logo"
       },
       {
         "ProjectTitle": "Cisco",
         "Description": "Cisco was looking for someone who could ramp up extremely quickly on their design and verification environment for one of their top end router ASICs.  Sarge came in, and within a week was writing tests. %p Cisco's main goal was to increase the current coverage on their ASICs, and Sarge was able to help them achieve this goal with the tests he wrote and the modifications he made to the environment. %p He met regularly with the designers to ensure that proper coverage for the RTL was being obtained.",
-        "Image": "images/cisco.png"
+        "HighRes": "images/cisco.png",
+        "Alt": "Cisco Logo",
+        "Image": "images/cisco-low.png"
       },
       {
         "ProjectTitle": "Cadence",
         "Description": "In 2008, Cadence Teaching Services put together a program for the Brazilian government to teach IC-Design to some of the local residents.  The idea being that Brazil would then have a workforce in place to lure semiconductor companies to place design houses there. %p The program consisted of both theoretical and practical/tools components.  Sarge was chosen to be an instructor for the first two theoretical digital design segments, which covered the topics of Architecture and Design/Verification, as well as a number of the tools classes including Verilog, Specman, RTL Compiler, and Static Timing Analysis. %p Duties included teaching the classes, grading homeworks, leading the labs, and modifying all portions as necessary.  The work was highly intensive, but it allowed Sarge to draw on his past teaching experience, and share his knowledge with some very bright and eager students.",
-        "Image": "images/cadence.jpg"
+        "Image": "images/cadence-low.png",
+        "Alt": "Cadence Logo",
+        "HighRes": "images/cadence.png"
       }
       ]
   }
